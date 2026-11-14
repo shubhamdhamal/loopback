@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Auto Refresher",
+    "name": "Loopback",
     "version": "1.0.0",
     "description": "Reload the current website on a custom timer.",
     "permissions": [
