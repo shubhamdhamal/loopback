@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Refresher</title>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+    <main class="app">
+        <header class="topbar">
+            <div class="logo-wrap">
+                <div class="logo-dot"></div>
+                <h1>Auto Refresher</h1>
+            </div>
+            <span class="badge">v1.0</span>
+        </header>
+
+        <label class="field" for="interval">
+            Refresh every
+            <div class="input-row">
+                <input id="interval" type="number" min="1" max="3600" value="30" />
+                <span>seconds</span>
+            </div>
+        </label>
+
+        <div class="status-box">
+            <span class="label">Status</span>
+            <strong id="status">Stopped</strong>
+        </div>
+
+        <div class="countdown-box">
+            <span class="label">Next refresh</span>
+            <strong id="countdown">--:--</strong>
+        </div>
+
+        <div class="exclude-box">
+            <label class="field" for="excludedDomains">
+                Skip these domains
+            </label>
+            <textarea id="excludedDomains" rows="4" placeholder="example.com, localhost, app.example.com"></textarea>
+        </div>
+
+        <div class="action-row">
+            <button id="toggleRefresh" class="primary-btn" type="button">Start refresh</button>
+            <button id="refreshNow" class="secondary-btn" type="button">Refresh now</button>
+        </div>
+
+        <footer class="footer-text">Developed by Shubham Dhamal</footer>
+    </main>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
